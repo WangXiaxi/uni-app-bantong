@@ -21,6 +21,17 @@
 				}
 			}, 3000)
 		},
+		//点击导航栏 buttons 时触发
+		onNavigationBarButtonTap(e) {
+			const index = e.index
+			if (index === 0) {
+				const src = this.src
+				this.src = ''
+				this.$nextTick(() => {
+					this.src = src
+				})
+			}
+		},
 		methods: {
 			async getUrl() {
 				const historyUrl = uni.getStorageSync('historyUrl')
