@@ -73,5 +73,35 @@
     },
     "mp-toutiao" : {
         "usingComponents" : true
-    }
+    },
+		"h5" : {
+		    "devServer" : {
+		        "disableHostCheck" : true,
+		        "proxy" : {
+		            "/service" : {
+		                // "target" : "http://localhost:12306",
+		                "target" : "http://test.hzyh.ehanone.com",
+		                "changeOrigin" : true,
+		                "secure" : false
+		            },
+		            "/anyCall" : {
+		                // "target" : "http://localhost:12306",
+		                "target" : "http://test.hzyh.ehanone.com",
+		                "changeOrigin" : true,
+		                "secure" : false
+		            },
+		            "/public" : {
+		                // "target" : "http://localhost:12306",
+		                "target" : "http://test.hzyh.ehanone.com",
+		                "changeOrigin" : true,
+		                "secure" : false
+		            }
+		        }
+		    },
+		    "title" : "版通",
+		    "router" : {
+		        "mode" : "history"
+		    },
+		    "domain" : "http://h5.hzyh.ehanone.com/"
+		}
 }
