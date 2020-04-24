@@ -48,7 +48,7 @@
 										mask: true,
 										title: '正在下载更新，请勿退出！'
 									})
-									var dtask = plus.downloader.createDownload(url_base_image + '/public/app/dfyl_app_' + andr.version + '.apk', {},
+									var dtask = plus.downloader.createDownload(andr.url, {},
 										function(d, status) {
 											uni.hideLoading()
 											// 下载完成  

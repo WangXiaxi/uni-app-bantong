@@ -17,11 +17,10 @@
 		methods: {
 			async getUrl() {
 				const datas = await commonModel.getDFWebURL()
-				this.src = datas.url
+				this.src = datas.data.weburl
 			}
 		}
 	}
 </script>
-
 <style>
 </style>
